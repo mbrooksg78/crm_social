@@ -7,6 +7,7 @@ on:
       - "13.0*"
   push:
     branches:
+      - "master"
       - "13.0"
       - "13.0-ocabot-*"
 
