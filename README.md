@@ -1,5 +1,5 @@
-[![Pre-commit Status](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml/badge.svg?branch=master)](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml?query=branch%3Amaster)
-[![Build Status](https://https://github.com/mbrooksg78/crm_social/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/OCA/server-tools/actions/workflows/test.yml?query=branch%3Amaster)
+[![pre-commit](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml)
+[![tests](https://github.com/mbrooksg78/crm_social/actions/workflows/test.yml/badge.svg)](https://github.com/mbrooksg78/crm_social/actions/workflows/test.yml)
 [![codecov](https://app.codecov.io/gh/mbrooksg78/crm_social/branch/master/graph/badge.svg)](https://app.codecov.io/gh/mbrooksg78/crm_social/branch/master)
 
 <!-- /!\ do not modify above this line -->
