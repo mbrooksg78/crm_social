@@ -11,5 +11,5 @@
     # any module necessary for this one to work correctly
     "depends": ["website", "crm_social_networks"],
     # always loaded
-    "data": ["data/website_data.xml", "views/inherited_website_partner_templates.xml"],
+    "data": ["data/website_data.xml", "views/partner_templates.xml"],
 }
