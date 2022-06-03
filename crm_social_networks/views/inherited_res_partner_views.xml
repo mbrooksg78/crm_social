@@ -1,0 +1,106 @@
+<odoo>
+    <record
+        id="res_partner_kanban_view_inherited_crm_social_network"
+        model="ir.ui.view"
+    >
+        <field name="name">res_partner_kanban_view.extended</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view" />
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field name="profile_complete" />
+            </field>
+
+            <xpath expr="//div[hasclass('oe_kanban_partner_links')]" position="after">
+                <div class="o_kanban_record_bottom">
+                    <div class="oe_kanban_bottom_left" />
+                    <div class="oe_kanban_bottom_right">
+                        <div class="bagde badge-pill bg-success">
+                            <span
+                                class="o_badge_text"
+                                t-if="record.profile_complete.raw_value"
+                            >Profile Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_form_inherited_crm_social_network" model="ir.ui.view">
+        <field name="name">view.partner.form.extended</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('oe_title')]/div[hasclass('o_row')]"
+                position="inside"
+            >
+                <span
+                    class="badge badge-pill bg-success"
+                    attrs="{'invisible': [('profile_complete', '=', False)]}"
+                >Profile Complete</span>
+            </xpath>
+            <xpath expr="//field[@name='image_1920']" position="before">
+                <widget
+                    name="web_ribbon"
+                    title="Profile Complete"
+                    attrs="{'invisible': [('profile_complete', '=', False)]}"
+                />
+            </xpath>
+            <notebook position="inside">
+                <page string="Social Networks">
+                    <field name="profile_complete" invisible="1" />
+                    <div class="row_o">
+                        <i class="fa fa-facebook-square pr-2" />
+                        <field
+                            class="oe_inline"
+                            colspan="3"
+                            nolabel="1"
+                            name="facebook_account"
+                            widget="url"
+                        />
+                    </div>
+                    <div class="row_o">
+                        <i class="fa fa-twitter pr-2" />
+                        <field
+                            class="oe_inline"
+                            colspan="3"
+                            name="twitter_account"
+                            nolabel="1"
+                            widget="url"
+                        />
+                    </div>
+                    <div class="row_o">
+                        <i class="fa fa-linkedin pr-2" />
+                        <field
+                            class="oe_inline"
+                            colspan="3"
+                            name="linkedin_account"
+                            nolabel="1"
+                            widget="url"
+                        />
+                    </div>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record
+        id="view_res_partner_filter_inherited_crm_social_network"
+        model="ir.ui.view"
+    >
+        <field name="name">view.res.partner.filter.extended</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+            <filter name="type_company" position="after">
+                <filter
+                    string="Profile incomplete"
+                    name="profile_incomplete"
+                    domain="[('profile_complete', '=', False)]"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
