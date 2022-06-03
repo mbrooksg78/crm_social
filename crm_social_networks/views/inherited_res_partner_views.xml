@@ -41,13 +41,6 @@
                     attrs="{'invisible': [('profile_complete', '=', False)]}"
                 >Profile Complete</span>
             </xpath>
-            <xpath expr="//field[@name='image_1920']" position="before">
-                <widget
-                    name="web_ribbon"
-                    title="Profile Complete"
-                    attrs="{'invisible': [('profile_complete', '=', False)]}"
-                />
-            </xpath>
             <notebook position="inside">
                 <page string="Social Networks">
                     <field name="profile_complete" invisible="1" />
