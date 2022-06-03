@@ -1,7 +1,6 @@
-[![Pre-commit Status](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml/badge.svg?branch=13.0)](https://github.com/OCA/server-tools/actions/workflows/pre-commit.yml?query=branch%3A13.0)
-[![Build Status](https://github.com/OCA/server-tools/actions/workflows/test.yml/badge.svg?branch=13.0)](https://github.com/OCA/server-tools/actions/workflows/test.yml?query=branch%3A13.0)
-[![codecov](https://codecov.io/gh/OCA/server-tools/branch/13.0/graph/badge.svg)](https://codecov.io/gh/OCA/server-tools)
-[![Translation Status](https://translation.odoo-community.org/widgets/server-tools-13-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/server-tools-13-0/?utm_source=widget)
+[![Pre-commit Status](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml/badge.svg?branch=master)](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml?query=branch%3Amaster)
+[![Build Status](https://https://github.com/mbrooksg78/crm_social/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/OCA/server-tools/actions/workflows/test.yml?query=branch%3Amaster)
+[![codecov](https://app.codecov.io/gh/mbrooksg78/crm_social/branch/master/graph/badge.svg)](https://app.codecov.io/gh/mbrooksg78/crm_social/branch/master)
 
 <!-- /!\ do not modify above this line -->
 
