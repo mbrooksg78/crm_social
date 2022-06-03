@@ -14,7 +14,7 @@ class WebsiteCrmSocialNetworks(http.Controller):
     def my_customers(self, page=0, **post):
         Partner = request.env["res.partner"]
         search_value = post.get("search")
-        domain = [("active", "=", True), ("assigned_partner_id", "!=", False)]
+        domain = [("active", "=", True), ("parent_id", "=", False)]
         if search_value:
             domain += [
                 "|",

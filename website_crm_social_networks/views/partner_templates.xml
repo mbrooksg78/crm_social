@@ -40,7 +40,7 @@
                             class="d-block mr-3 text-center o_width_128"
                             t-options='{"widget": "image", "qweb_img_responsive": False, "class": "o_image_128_max"}'
                         />
-                        <div class="media-body" style="min-height: 65px">
+<div class="media-body" style="min-height: 65px">
                             <div>
                                 <span t-field="partner.display_name" />
                                 <span
@@ -48,7 +48,7 @@
                                     t-if="partner.profile_complete"
                                 >Complete Profile</span>
                             </div>
-                            <div t-field="partner.website_short_description" />
+                            <div t-field="partner.comment" />
                             <div t-if="partner.facebook_account">
                                 <i class="fa fa-facebook-square" />
                                 <a
