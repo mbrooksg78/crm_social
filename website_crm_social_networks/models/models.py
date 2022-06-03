@@ -1,0 +1,16 @@
+# from odoo import models, fields, api
+
+
+# class website_crm_social_networks(models.Model):
+#     _name = 'website_crm_social_networks.website_crm_social_networks'
+#     _description = 'website_crm_social_networks.website_crm_social_networks'
+
+#     name = fields.Char()
+#     value = fields.Integer()
+#     value2 = fields.Float(compute="_value_pc", store=True)
+#     description = fields.Text()
+#
+#     @api.depends('value')
+#     def _value_pc(self):
+#         for record in self:
+#             record.value2 = float(record.value) / 100

@@ -1,0 +1,82 @@
+<odoo>
+    <template id="partner_social_networks" name="Social Networks">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <section>
+                    <h1 class="text-center">
+                        My Customers
+                    </h1>
+                </section>
+            </div>
+            <div class="container">
+                <div class="col-lg-11 offset-lg-1" id="ref_content">
+                    <div class="d-flex m-2">
+                        <t t-call="website.pager">
+                            <t t-set="classname" t-value="'float-left'" />
+                        </t>
+                        <form
+                            action=""
+                            method="get"
+                            class="navbar-search ml-auto pagination form-inline"
+                        >
+                            <div class="form-group">
+                                <input
+                                    type="text"
+                                    name="search"
+                                    class="search-query form-control"
+                                    placeholder="Search"
+                                    t-att-value="post.get('search', '')"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <p t-if="not partners">No result found</p>
+                <t t-foreach="partners" t-as="partner">
+                    <div class="media mt-3">
+                        <span
+                            role="img"
+                            t-field="partner.image_128"
+                            class="d-block mr-3 text-center o_width_128"
+                            t-options='{"widget": "image", "qweb_img_responsive": False, "class": "o_image_128_max"}'
+                        />
+                        <div class="media-body" style="min-height: 65px">
+                            <div>
+                                <span t-field="partner.display_name" />
+                                <span
+                                    class="badge badge-pill bg-success pl-2"
+                                    t-if="partner.profile_complete"
+                                >Complete Profile</span>
+                            </div>
+                            <div t-field="partner.website_short_description" />
+                            <div t-if="partner.facebook_account">
+                                <i class="fa fa-facebook-square" />
+                                <a
+                                    t-att-href="partner.facebook_account"
+                                    target="_blank"
+                                >
+                                    <span t-field="partner.facebook_account" />
+                                </a>
+                            </div>
+                            <div t-if="partner.twitter_account">
+                                <i class="fa fa-twitter" />
+                                <a t-att-href="partner.twitter_account" target="_blank">
+                                    <span t-field="partner.twitter_account" />
+                                </a>
+                            </div>
+                            <div t-if="partner.linkedin_account">
+                                <i class="fa fa-linkedin" />
+                                <a
+                                    t-att-href="partner.linkedin_account"
+                                    target="_blank"
+                                >
+                                    <span t-field="partner.linkedin_account" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>
