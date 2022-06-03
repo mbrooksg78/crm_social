@@ -1,6 +1,6 @@
 [![pre-commit](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/mbrooksg78/crm_social/actions/workflows/pre-commit.yml)
 [![tests](https://github.com/mbrooksg78/crm_social/actions/workflows/test.yml/badge.svg)](https://github.com/mbrooksg78/crm_social/actions/workflows/test.yml)
-[![codecov](https://app.codecov.io/gh/mbrooksg78/crm_social/branch/master/graph/badge.svg)](https://app.codecov.io/gh/mbrooksg78/crm_social/branch/master)
+[![codecov](https://codecov.io/gh/mbrooksg78/crm_social/branch/master/graph/badge.svg?token=3B3IG4R7I1)](https://codecov.io/gh/mbrooksg78/crm_social)
 
 <!-- /!\ do not modify above this line -->
 
