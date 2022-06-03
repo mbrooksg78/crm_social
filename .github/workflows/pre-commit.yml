@@ -3,6 +3,7 @@ name: pre-commit
 on:
   pull_request:
     branches:
+      - "master"
       - "13.0*"
   push:
     branches:
